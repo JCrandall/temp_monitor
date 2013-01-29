@@ -6,7 +6,15 @@
     <ul>
     {% for sensor_id in sensor_list %}
         <p>{{ sensor_id.nickname }}</p>
+
     {% endfor %}
+
+    {% for data_list in data_list_list %}
+	{% for data_point in data_list %}
+		<p>{{data_point}}</p>
+	{% endfor %}
+    {% endfor %}
+
     </ul>
 {% else %}
     <p>No sensors are available.</p>
